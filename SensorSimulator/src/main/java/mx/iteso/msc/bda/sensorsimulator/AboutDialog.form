@@ -27,7 +27,7 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jLabel2" alignment="0" pref="321" max="32767" attributes="0"/>
+                  <Component id="jLabel2" alignment="0" pref="504" max="32767" attributes="0"/>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       <Component id="okButton" min="-2" pref="67" max="-2" attributes="0"/>
@@ -47,7 +47,7 @@
               <EmptySpace max="-2" attributes="0"/>
               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="jLabel2" pref="88" max="32767" attributes="0"/>
+              <Component id="jLabel2" pref="259" max="32767" attributes="0"/>
               <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
               <Component id="okButton" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
@@ -77,7 +77,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
-        <Property name="text" type="java.lang.String" value="&lt;html&gt;&#xa;&lt;b&gt;An academic project by Mario Contreras.&lt;/b&gt;&lt;br/&gt;&#xa;&lt;br/&gt;&#xa;Blah, blah, blah....&lt;br/&gt;&#xa;&lt;br/&gt;&#xa;And more blah....&lt;br/&gt; &#xa;&lt;/html&gt;"/>
+        <Property name="text" type="java.lang.String" value="&lt;html&gt;&#xa;&lt;b&gt;An academic project by Mario Contreras.&lt;/b&gt;&lt;br/&gt;&#xa;&lt;br/&gt;&#xa;&lt;ul&gt;&#xa;&lt;li&gt;AboutDialog.java - just an &quot;About&quot; dialog box.&lt;/li&gt;&#xa;&lt;li&gt;MainForm.java - Main form. Uses a JTable to display data. It has a background task (thread) to read every 2 seconds the MongoDB database and refresh the table. It contains a list of nodes (List network) which represents a network of 5 nodes. When the form is created, the list is created with 5 nodes and each nodes contains 3 sensors.&lt;/li&gt;&#xa;&lt;li&gt;dbAccess.java - Utility class for getting and saving data from MongoDB database.&lt;/li&gt;&#xa;&lt;li&gt;Data.java - Represents one document to be stored. It contains the node ID, the time when the record was generated, and the value of each sensor (if available).&lt;/li&gt;&#xa;&lt;li&gt;SensorType.java - Utility enum that defines the sensor type (Temperature, Humidity, Photoelectric).&lt;/li&gt;&#xa;&lt;li&gt;Sensor.java - The sensor. It generates a thread that generates that changes every cycle. That cycle depends of the minTime and maxTime attributes.&lt;/li&gt;&#xa;&lt;li&gt;Node.java - A node. It contains 3 sensors (one per type) and it collects the data every REFRESH_TIME miliseconds. When the data is collected, a new Data object is created and dbAccess.saveData() is called to store the document, then the sensors are reset.&lt;/li&gt;&#xa;&lt;/ul&gt;&#xa;&lt;/html&gt;"/>
       </Properties>
     </Component>
   </SubComponents>

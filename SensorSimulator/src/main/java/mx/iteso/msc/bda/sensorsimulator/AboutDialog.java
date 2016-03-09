@@ -56,7 +56,7 @@ public class AboutDialog extends javax.swing.JDialog {
         jLabel1.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
         jLabel1.setText("Sensor Simulator");
 
-        jLabel2.setText("<html>\n<b>An academic project by Mario Contreras.</b><br/>\n<br/>\nBlah, blah, blah....<br/>\n<br/>\nAnd more blah....<br/> \n</html>");
+        jLabel2.setText("<html>\n<b>An academic project by Mario Contreras.</b><br/>\n<br/>\n<ul>\n<li>AboutDialog.java - just an \"About\" dialog box.</li>\n<li>MainForm.java - Main form. Uses a JTable to display data. It has a background task (thread) to read every 2 seconds the MongoDB database and refresh the table. It contains a list of nodes (List network) which represents a network of 5 nodes. When the form is created, the list is created with 5 nodes and each nodes contains 3 sensors.</li>\n<li>dbAccess.java - Utility class for getting and saving data from MongoDB database.</li>\n<li>Data.java - Represents one document to be stored. It contains the node ID, the time when the record was generated, and the value of each sensor (if available).</li>\n<li>SensorType.java - Utility enum that defines the sensor type (Temperature, Humidity, Photoelectric).</li>\n<li>Sensor.java - The sensor. It generates a thread that generates that changes every cycle. That cycle depends of the minTime and maxTime attributes.</li>\n<li>Node.java - A node. It contains 3 sensors (one per type) and it collects the data every REFRESH_TIME miliseconds. When the data is collected, a new Data object is created and dbAccess.saveData() is called to store the document, then the sensors are reset.</li>\n</ul>\n</html>");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -65,7 +65,7 @@ public class AboutDialog extends javax.swing.JDialog {
             .addGroup(layout.createSequentialGroup()
                 .addGap(16, 16, 16)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 321, Short.MAX_VALUE)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 504, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(okButton, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -80,14 +80,13 @@ public class AboutDialog extends javax.swing.JDialog {
                 .addContainerGap()
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 88, Short.MAX_VALUE)
+                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 259, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addComponent(okButton)
                 .addContainerGap())
         );
 
         getRootPane().setDefaultButton(okButton);
-        jLabel1.getAccessibleContext().setAccessibleName("Sensor Simulator");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
